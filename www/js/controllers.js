@@ -50,6 +50,7 @@ angular.module('starter.controllers', [])
             hideLoading();
         }).catch(function(err) {
             hideLoading();
+                alert(JSON.stringify(err));
         });
     }
 })
