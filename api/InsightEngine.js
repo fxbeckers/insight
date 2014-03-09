@@ -1,9 +1,10 @@
 var food = require("./Food");
+var ness = require("./NeSS");
 var Q = require("q");
 var Enumerable = require("linq");
 
 // All datasets here
-var datasetGetters = [food.getData];
+var datasetGetters = [food.getData, ness.getData];
 
 function cleanup (data) {
     data.groups = Enumerable.from(data.groups)
@@ -90,12 +91,17 @@ function getHumanReadableInsights (data) {
 function getAllDatasets (geo) {
     var promises =  Enumerable.from(datasetGetters)
         .select(function(getter){
-            return getter(geo).then(getHumanReadableInsights);
+            return getter(geo).then(function(statsSummary) {
+                return {
+                    insights : getHumanReadableInsights(statsSummary),
+                    summary : statsSummary
+                }
+            });
         })
         .toArray();
 
     return Q.all(promises);
 }
 
-exports.garnerInsights = getAllDatasets;
+exports.garnerAllInsights = getAllDatasets;
 

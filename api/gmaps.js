@@ -18,10 +18,11 @@ exports.reverseGeocode = function (geo) {
 
 exports.getPostcode = function (geo) {
     return exports.reverseGeocode(geo).then(function(data){
-        var sn = Enumerable.from(data.results[0].address_components)
+        var sn = Enumerable.from(data.results)
+            .selectMany('$.address_components')
             .first(function(item){
-                return Enumerable.from(item.types).contains('postal_code');
-            }).short_name;
+                return Enumerable.from(item.types).contains('postal_code') && item.long_name.length>6;
+            }).long_name;
         return sn.replace(/\s+/gi,'');
     });
 };

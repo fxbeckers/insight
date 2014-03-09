@@ -59,10 +59,10 @@ app.get('/insight/:lat/:lng', function(req, res){
             lat : lat,
             lng : lng
         }
-        insightEngine.garnerInsights(coord).then(function(insights) {
+        insightEngine.garnerAllInsights(coord).then(function(insights) {
             res.send({
                 coord : coord,
-                insights : insights
+                metrics : insights
             });
         }).catch(function(err) {
             res.send({
