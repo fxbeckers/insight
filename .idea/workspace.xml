@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="51" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+            <state line="11" column="51" selection-start="320" selection-end="320" vertical-scroll-proportion="0.22727273" vertical-offset="0" max-vertical-offset="726">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="64" selection-start="325" selection-end="325" vertical-scroll-proportion="0.17094018" vertical-offset="0" max-vertical-offset="975">
+            <state line="18" column="36" selection-start="695" selection-end="696" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="3" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1605">
               <folding />
             </state>
           </provider>
@@ -123,7 +132,6 @@
         <option value="$PROJECT_DIR$/www/lib/angularjs-geolocation.min.js" />
         <option value="$PROJECT_DIR$/www/templates/location.html" />
         <option value="$PROJECT_DIR$/www/config.xml" />
-        <option value="$PROJECT_DIR$/www/js/services.js" />
         <option value="$PROJECT_DIR$/www/templates/location-result.html" />
         <option value="$PROJECT_DIR$/www/templates/about.html" />
         <option value="$PROJECT_DIR$/www/templates/location-stats-summary.html" />
@@ -131,6 +139,7 @@
         <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/services.js" />
       </list>
     </option>
   </component>
@@ -382,7 +391,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3227513" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24677187" sideWeight="0.67724866" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24677187" sideWeight="0.67724866" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -445,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="27" selection-start="592" selection-end="592" vertical-scroll-proportion="0.44871795" vertical-offset="0" max-vertical-offset="702">
@@ -476,13 +478,6 @@
             <element signature="n#style#0;n#h3#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="3" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.9504132" vertical-offset="795" max-vertical-offset="1605">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,7 +509,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="64" selection-start="325" selection-end="325" vertical-scroll-proportion="0.17094018" vertical-offset="0" max-vertical-offset="975">
+        <state line="18" column="36" selection-start="695" selection-end="696" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="3" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="51" selection-start="320" selection-end="320" vertical-scroll-proportion="0.22727273" vertical-offset="0" max-vertical-offset="726">
           <folding />
         </state>
       </provider>

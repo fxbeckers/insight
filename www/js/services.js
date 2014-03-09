@@ -4,12 +4,12 @@ angular.module('starter.services', [])
   return {
 
     lookup: function(query) {
-      return $http.get('http://localhost:3000/query', {
+      return $http.get('http://insight.pagekite.me/query', {
           params : { q : query }
       });
     },
     insight: function(coord) {
-      return $http.get('http://localhost:3000/insight/'+coord.lat+'/'+coord.lng);
+      return $http.get('http://insight.pagekite.me/insight/'+coord.lat+'/'+coord.lng);
     }
   }
 })
