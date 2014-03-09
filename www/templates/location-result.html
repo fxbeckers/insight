@@ -1,0 +1,35 @@
+<ion-view title="'[in]sight'">
+  <ion-content has-header="true" has-tab="true">
+      <h3 padding="true" ng-show="loading" style="margin: 20px; text-align: center;">
+          <i class="fa fa-refresh fa-spin"></i>
+          loading...
+      </h3>
+      <div class="list">
+      <div class="list card" ng-repeat="metric in metrics | orderBy:metric.insights.length:reverse" ng-init="idx = $index">
+          <a  class="item item-divider" ui-sref="tab.location-stats-summary({lat: lat, lng : lng, idx : $index })">
+              {{ metric.summary.datasetName }}
+          </a>
+
+          <div class="item item-body" ng-repeat="insight in metric.insights">
+              <p style="margin-top: 0">
+                  {{ insight }}
+              </p>
+        </div>
+          <div class="item tabs tabs-secondary tabs-icon-left">
+              <a class="tab-item positive" ui-sref="tab.location-stats-summary({lat: lat, lng : lng, idx : idx })">
+                  <i class="icon ion-stats-bars"></i>
+                  Stats
+              </a>
+              <a class="tab-item positive" ui-sref="tab.location-stats-detail({lat: lat, lng : lng, idx : $index })">
+                  <i class="icon ion-map"></i>
+                  Near me
+              </a>
+              <a class="tab-item positive" ng-click="share(metric)">
+                  <i class="icon ion-share"></i>
+                  Share
+              </a>
+          </div>
+      </div>
+  </div>
+  </ion-content>
+</ion-view>
