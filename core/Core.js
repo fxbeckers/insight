@@ -1,6 +1,7 @@
 var Promise = require("promise");
 var request = require("request");
 var Enumerable = require("linq");
+var Q = require("q");
 var xml2json = require('xml2json');
 
 if(!String.format)
@@ -75,9 +76,15 @@ exports.request = function requestp(url) {
                 err.res = res;
                 return reject(err);
             }
-            resolve(JSON.parse(body));
+            resolve(body);
         });
     });
+};
+
+exports.requestJson = function requestp(url) {
+    return exports.request(url).then(function(item) {
+        return JSON.parse(item);
+    })
 };
 
 
