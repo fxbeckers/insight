@@ -68,12 +68,23 @@ var getData = function(geo) {
 
          //var stdDev = data.stdDev('$.Rating');
          //var avgAll = data.average('$.Rating');
+        var nearestStat = Enumerable.from(Enumerable.from(groupz).first(function(item) {
+                return item.items.length;
+            }).items)
+            .select(function(rest) {
+                return  {
+                    key : rest.BusinessName,
+                    val : String.format('<img style="height: 45px;" src="img/fhrs/{0}.jpg" />', rest.RatingValue)
+                };
+            })
+            .toArray();
 
         return {
             datasetName : 'Food safety rating',
             formatter : 'average food safety rating',
             groups : groupz,
-            threshold : 0.1
+            threshold : 0.1,
+            detailList : nearestStat
         }
     })
 }

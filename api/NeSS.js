@@ -96,13 +96,13 @@ exports.getData = function(geo) {
        return parseDatasets(datasets);
     }).then(function(kvp){
             var groupDefinitions = {
-                1: { boundaryId: 1, description: 'immediate vicinity' },
-                2: { boundaryId: 2, description: 'neighbourhood' },
-                3: { boundaryId: 3, description: 'local area' },
-                4: { boundaryId: 4, description: 'council' },
-                5: { boundaryId: 5, description: 'city' },
-                6: { boundaryId: 6, description: 'region' },
-                7: { boundaryId: 7, description: 'country' }
+                1: { boundaryId: 1, description: 'your immediate vicinity' },
+                2: { boundaryId: 2, description: 'this neighbourhood' },
+                3: { boundaryId: 3, description: 'this local area' },
+                4: { boundaryId: 4, description: 'this council' },
+                5: { boundaryId: 5, description: 'the city' },
+                6: { boundaryId: 6, description: 'the region' },
+                7: { boundaryId: 7, description: 'the country' }
             }
 
             var keys = Object.getOwnPropertyNames(kvp)
@@ -119,11 +119,16 @@ exports.getData = function(geo) {
                 })
                 .toArray();
 
+            var nearestStat = Enumerable.from(gps).first();
             return {
                 datasetName : 'Unemployment rate',
                 formatter : 'unemployment rate',
                 groups : gps,
-                threshold : 0.15
+                threshold : 0.15,
+                detailList : [{
+                    key : nearestStat.description,
+                    val : Math.round(nearestStat.value*10)/10 + '&#37;'
+                }]
             }
     });
 }

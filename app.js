@@ -1,4 +1,5 @@
 var express = require('express');
+var gm = require('./api/gmaps');
 
 var urlLib = require('url');
 var http = require('http');
@@ -38,14 +39,14 @@ if ('development' == app.get('env')) {
 app.get('/query', function(req, res){
     var url_parts = urlLib.parse(req.url, true);
 
-    var query = url_parts.q;
+    var query = url_parts.query.q;
 
     if (!query) {
         res.send('Missing query');
     } else {
-        res.send({
-            query : query
-        });
+        gm.geoCode(query).then(function(loc) {
+            res.send(loc);
+        })
     }
 });
 app.get('/insight/:lat/:lng', function(req, res){
