@@ -1,18 +1,15 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express');
-var routes = require('./routes');
-var insight = require('./routes/insight');
+
+var urlLib = require('url');
 var http = require('http');
 var path = require('path');
+
+var insightEngine = require('./api/InsightEngine');
 
 var app = express();
 
 var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', config.allowedDomains);
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -31,7 +28,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(allowCrossDomain);
 app.use(app.router);
-app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -39,8 +35,42 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/query', insight.query);
+app.get('/query', function(req, res){
+    var url_parts = urlLib.parse(req.url, true);
+
+    var query = url_parts.q;
+
+    if (!query) {
+        res.send('Missing query');
+    } else {
+        res.send({
+            query : query
+        });
+    }
+});
+app.get('/insight/:lat/:lng', function(req, res){
+    var lat = parseFloat(req.params.lat);
+    var lng = parseFloat(req.params.lng);
+
+    if (!lat || !lng) {
+        res.send('Missing query');
+    } else {
+        var coord = {
+            lat : lat,
+            lng : lng
+        }
+        insightEngine.garnerInsights(coord).then(function(insights) {
+            res.send({
+                coord : coord,
+                insights : insights
+            });
+        }).catch(function(err) {
+            res.send({
+                error : err
+            });
+        });
+    }
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -47,7 +47,7 @@ var parseDatasets = function (datasets){
      */
     debugger;
 
-    var data = datasets["ns2:getDataCubeResponseElement.ns3:Datasets"];
+    var data = datasets["ns2:getDataCubeResponseElement"]["ns3:Datasets"];
 
     var datasetDetails = Enumerable.from(data)
         .select("$.DatasetDetails")

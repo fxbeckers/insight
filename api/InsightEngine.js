@@ -77,11 +77,11 @@ function getHumanReadableInsights (data) {
             return String.format('The {0} in {1} is {2}, which is {3}% {4} than that of {5} at {6}',
                 data.formatter,
                 item.current.description,
-                item.current.value,
+                Math.round(Math.abs(item.current.value)*10)/10,
                 Math.round(Math.abs(item.pctChange)*1000)/10,
                 (item.pctChange > 0)?'more' : 'less',
                 item.other.description,
-                item.other.value
+                Math.round(Math.abs(item.other.value)*10)/10
             )
         })
         .toArray();
