@@ -17,10 +17,7 @@ Go Team! Happy hacking!
 ##Demo
 Mobile Web App [https://fxbeckers.github.io/insight](https://fxbeckers.github.io/insight)
 
-###Other links
-- Rewired State Project Homepage [http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight](http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight)
-- Event photo set [http://www.flickr.com/photos/gt_p/sets/72157642033276584/](http://www.flickr.com/photos/gt_p/sets/72157642033276584/)
-
+##Screenshots
 ![](./doc/header.jpg?raw=true =720x)
 
 ##Apis
@@ -44,5 +41,7 @@ Mobile Web App [https://fxbeckers.github.io/insight](https://fxbeckers.github.io
 - angular.js
 - linq.js
 
-
+###Other links
+- Rewired State Project Homepage [http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight](http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight)
+- Event photo set [http://www.flickr.com/photos/gt_p/sets/72157642033276584/](http://www.flickr.com/photos/gt_p/sets/72157642033276584/)
 
