@@ -15,7 +15,7 @@ Go Team! Happy hacking!
 - Nafisa Javed [@nj12_12](https://twitter.com/nj12_12)
 
 ##Demo
-Mobile Web App [https://fxbeckers.github.io/insight]()
+Mobile Web App [https://fxbeckers.github.io/insight](https://fxbeckers.github.io/insight)
 
 ![](./doc/header.jpg?raw=true =720x)
 
