@@ -1,4 +1,4 @@
-#![\[in\]sight](http://fxbeckers.github.io/insight/doc/LOGO.jpg =220x)
+#![\[in\]sight](./doc/LOGO.jpg?raw=true =220x)
 ###National Hack the Government 2014 *\#NHTG2014*
 
 **[in]sight**’s aim is to make government data accessible to the public in a manner that’s easy to digest.
@@ -17,7 +17,7 @@ Go Team! Happy hacking!
 ##Demo
 Mobile Web App [https://fxbeckers.github.io/insight]()
 
-![](http://fxbeckers.github.io/insight/doc/header.jpg =720x)
+![](./doc/header.jpg?raw=true =720x)
 
 ##Apis
 - [Food Hygiene Rating Scheme](http://api.ratings.food.gov.uk/Help)
