@@ -9,16 +9,17 @@ other interesting and relevant data wherever you may travel.
 
 Go Team! Happy hacking!
 
-##Authors
+###Authors
 - Conor Kiernan [@conorjkiernan](https://twitter.com/conorjkiernan)
 - Francois-Xavier Beckers [@fxbeckers](https://twitter.com/fxbeckers)
 - Nafisa Javed [@nj12_12](https://twitter.com/nj12_12)
 
-##Other links
-- Rewired State Project Homepage [http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight](http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight)
-
 ##Demo
 Mobile Web App [https://fxbeckers.github.io/insight](https://fxbeckers.github.io/insight)
+
+###Other links
+- Rewired State Project Homepage [http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight](http://hacks.rewiredstate.org/events/national_hack_the_government_2014/in-sight)
+- Event photo set [http://www.flickr.com/photos/gt_p/sets/72157642033276584/](http://www.flickr.com/photos/gt_p/sets/72157642033276584/)
 
 ![](./doc/header.jpg?raw=true =720x)
 
