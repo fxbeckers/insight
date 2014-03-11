@@ -1,5 +1,5 @@
 #![\[in\]sight](./doc/logo.jpg?raw=true =220x)
-###National Hack the Government 2014 *\#NHTG2014*
+###National Hack the Government 2014 [*\#NHTG14*](https://twitter.com/search?q=%23NHTG14)
 
 **[in]sight**’s aim is to make government data accessible to the public in a manner that’s easy to digest.
 It tries to accomplish this by highlighting interesting insights about data in your immediate area as it
